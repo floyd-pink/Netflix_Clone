@@ -10,7 +10,6 @@ function Row({ title, fetchUrl, isLarge }) /* destructing  */ {
         async function fetchData() {
             const request = await axios.get(fetchUrl);
             setMovies(request.data.results);
-            console.table(request.data.results);
             return request;
         }
         fetchData();
@@ -27,8 +26,9 @@ function Row({ title, fetchUrl, isLarge }) /* destructing  */ {
                         key={movie.id}
                         src={`${base_url}${isLarge?movie.poster_path:movie.backdrop_path}`}
                         alt={movie.name || movie.title}
-                       />
-                ))}
+                   
+                        />
+                ))}   
             </div>
         </div>
     );
