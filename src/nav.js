@@ -1,17 +1,17 @@
 import React from 'react';
 import './nav.css';
-
+import Login from './pages/Login';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Nav() {
  const netflix_logo='https://tse1.mm.bing.net/th/id/OIP.Of2MrfKXGN1chuR1adiytQHaHa?cb=ucfimg2&ucfimg=1&w=2000&h=2000&rs=1&pid=ImgDetMain&o=7&rm=3';
-
+ const navigate=useNavigate();
   const handellogo = () => {
     window.location.reload();
   };
 
   const handelavatar = () => {
-    window.location.reload();
-
+    navigate('/Login')
   };
 
   return (
