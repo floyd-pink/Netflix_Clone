@@ -1,25 +1,43 @@
-
 .nav {
-  position: fixed;   
-  top: 0;                
-  display: flex;        
-  justify-content: space-between; 
-  width: 100%;         
-  padding: 20px;
-  background-color: transparent; 
-  transition: background-color 0.5s ease; 
-  z-index: 1000;         
+position: fixed;
+top: 0;
+width: 100%;
+padding: 10px 10px ;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: background-color 0.5s ease;
+z-index: 1000;
 }
 
+.nav_visible {
+background-color: #121212;
+}
+
+.nav_hidden {
+background-color: transparent;
+}
 
 .nav_logo {
-  width: 80px;
-  object-fit: contain;   
-  
+width: 60px;
+object-fit: contain;
+cursor: pointer;
+
 }
 
-
-.nav_avatar {
-  width: 80px;
-  object-fit: contain;
+.nav_avatar { 
+width: 50px; 
+height: 50px; 
+object-fit: cover; 
+cursor: pointer; 
+border-radius: 50%; 
+border: 2px solid #fff; 
+margin-right: 20px;
+transition: transform 0.3s ease;
 }
+.nav_avatar:hover {
+   transform: scale(1.1); 
+ }
+ .nav_logo:hover{
+  transform: scale(1.1); 
+ }
